@@ -1,7 +1,7 @@
 FROM fedora:rawhide
 
 RUN dnf -y install gcc gettext wget librsvg2-tools git \
-    gtk3-devel mingw64-gtk3 \
+    gtk3-devel mingw64-gtk3 mingw64-harfbuzz \
     gobject-introspection-devel file \
     #libcanberra-gtk3 \
     libnotify-devel &&\
