@@ -1,7 +1,7 @@
 FROM fedora:41
 
 RUN dnf -y copr enable konradmb/choosenim &&\
-    dnf -y install gcc gettext wget librsvg2-tools git \
+    dnf -y install gcc gettext wget librsvg2-tools git which \
     gtk3-devel mingw64-gtk3 mingw64-harfbuzz mingw64-librsvg2 mingw64-hicolor-icon-theme \
     gobject-introspection-devel file \
     #libcanberra-gtk3 \
@@ -12,4 +12,4 @@ RUN dnf -y copr enable konradmb/choosenim &&\
     /usr/bin/choosenim -y stable &&\
     rm -rf /root/.choosenim/downloads/
 
-SHELL [ "/bin/bash", "-c" ]
+# SHELL [ "/bin/bash", "-c" ]
