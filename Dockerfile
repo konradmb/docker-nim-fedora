@@ -9,6 +9,7 @@ RUN dnf -y copr enable konradmb/choosenim &&\
     choosenim &&\
     dnf clean all &&\
     rm -rf /var/cache/yum &&\
-    /usr/bin/choosenim -y stable
+    /usr/bin/choosenim -y stable &&\
+    rm -rf /root/.choosenim/downloads/
 
 SHELL [ "/bin/bash", "-c" ]
