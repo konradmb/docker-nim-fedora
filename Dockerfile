@@ -1,4 +1,4 @@
-FROM fedora:41
+FROM fedora:42
 
 RUN dnf -y copr enable konradmb/choosenim &&\
     dnf -y install gcc gettext wget librsvg2-tools git which \
